@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\css\bootstrap-theme.css" />
+    <None Include="wwwroot\Content\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\Content\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\Content\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\Content\css\bootstrap.css" />
+    <None Include="wwwroot\Content\css\bootstrap.css.map" />
+    <None Include="wwwroot\Content\css\bootstrap.min.css" />
+    <None Include="wwwroot\Content\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\Content\css\jrh-custom.css" />
+    <None Include="wwwroot\Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\Content\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\Content\images\loading-black.gif" />
+    <None Include="wwwroot\Scripts\angular-animate.min.js" />
+    <None Include="wwwroot\Scripts\angular-local-storage.min.js" />
+    <None Include="wwwroot\Scripts\angular-messages.min.js" />
+    <None Include="wwwroot\Scripts\angular-route.min.js" />
+    <None Include="wwwroot\Scripts\angular-sanitize.min.js" />
+    <None Include="wwwroot\Scripts\angular-ui-router.min.js" />
+    <None Include="wwwroot\Scripts\bootstrap.min.js" />
+    <None Include="wwwroot\Scripts\thirdPartyBundle.js" />
+    <None Include="wwwroot\Scripts\thirdPartyBundle.min.js" />
+    <None Include="wwwroot\Scripts\ui-bootstrap-tpls-1.1.1.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.13" />
+  </ItemGroup>
+
+</Project>

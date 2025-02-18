@@ -1,0 +1,21 @@
+﻿.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/* consistent vertical alignment of checkboxes */
+input[type=checkbox], input[type=radio] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 3px;
+}
+
+/* removes the dotted line around the button on focus. This is not needed as Boostrap buttons indicate focus with thin line. */
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
+}
+
+/* navigation bar icon bar now on the left */
+.navbar-toggle.navbar-left {
+  float: left;
+  margin-left: 10px;
+}
+

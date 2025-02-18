@@ -1,0 +1,70 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+//GET https://localhost:7089/api/foo
+
+POST https://localhost:7089/api/auth/login
+Content-Type: application/json
+{
+    "username": "admin",
+    "password": "password"
+}
+
+###
+
+POST https://localhost:7089/api/auth/login
+Content-Type: application/json
+{
+    "username": "user2",
+    "password": "password"
+}
+
+###
+
+POST https://localhost:7089/api/auth/login
+Content-Type: application/json
+{
+    "username": "user1",
+    "password": "password"
+}
+
+###
+
+GET https://localhost:7089/api/auth/data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6ImFkbWluIiwianRpIjoiNDIzMjJiNmEtMmQ5ZC00NzllLWFhNDQtYTcyNzdiNjI1M2Q2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Mzk4MjcxNzMsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R3E-EgCzeTRHPjaCptjdtG2rRgZbAkBX1rlzWxAlO0M
+###
+
+GET https://localhost:7089/api/documents
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6ImFkbWluIiwianRpIjoiNDIzMjJiNmEtMmQ5ZC00NzllLWFhNDQtYTcyNzdiNjI1M2Q2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Mzk4MjcxNzMsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R3E-EgCzeTRHPjaCptjdtG2rRgZbAkBX1rlzWxAlO0M
+
+###
+
+GET https://localhost:7089/api/documents/5007bbca-fd5c-4085-aa3e-772114cae6d3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6ImFkbWluIiwianRpIjoiNDIzMjJiNmEtMmQ5ZC00NzllLWFhNDQtYTcyNzdiNjI1M2Q2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Mzk4MjcxNzMsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R3E-EgCzeTRHPjaCptjdtG2rRgZbAkBX1rlzWxAlO0M
+
+###
+
+PUT https://localhost:7089/api/documents
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6ImFkbWluIiwianRpIjoiNDIzMjJiNmEtMmQ5ZC00NzllLWFhNDQtYTcyNzdiNjI1M2Q2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Mzk4MjcxNzMsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R3E-EgCzeTRHPjaCptjdtG2rRgZbAkBX1rlzWxAlO0M
+Content-Type: application/json
+{
+    "id": "fbb06988-aca5-4ff0-99a6-deb043e87f65",
+    "title": "french new title",
+    "user": "user2",
+    "translationText": "some modified translation blah blah"
+}
+
+###
+
+POST https://localhost:7089/api/documents
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6ImFkbWluIiwianRpIjoiNDIzMjJiNmEtMmQ5ZC00NzllLWFhNDQtYTcyNzdiNjI1M2Q2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Mzk4MjcxNzMsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R3E-EgCzeTRHPjaCptjdtG2rRgZbAkBX1rlzWxAlO0M
+Content-Type: application/json
+{
+    "id": "fbasdsdbf0-99a6-deb043e87f65",
+    "title": "English",
+    "user": "user2",
+    "translationText": "once upon a time"
+}
+
+###
+
+DELETE https://localhost:7089/api/documents/d490b6bf-72a0-4143-85d1-6a5d3e0d81b8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6ImFkbWluIiwianRpIjoiNDIzMjJiNmEtMmQ5ZC00NzllLWFhNDQtYTcyNzdiNjI1M2Q2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE3Mzk4MjcxNzMsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R3E-EgCzeTRHPjaCptjdtG2rRgZbAkBX1rlzWxAlO0M

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexxika.Documents", "Lexxika.Documents\Lexxika.Documents.csproj", "{BBACB236-FD0A-3496-920F-C31EC3ECFA89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lexxika.Utility", "Lexxika.Utility\Lexxika.Utility.csproj", "{12F0FC52-7FEF-49EE-854A-051208866A83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBACB236-FD0A-3496-920F-C31EC3ECFA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBACB236-FD0A-3496-920F-C31EC3ECFA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBACB236-FD0A-3496-920F-C31EC3ECFA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBACB236-FD0A-3496-920F-C31EC3ECFA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F0FC52-7FEF-49EE-854A-051208866A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F0FC52-7FEF-49EE-854A-051208866A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F0FC52-7FEF-49EE-854A-051208866A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F0FC52-7FEF-49EE-854A-051208866A83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17605F36-AE5F-4564-8958-076B0D7E10D0}
+	EndGlobalSection
+EndGlobal

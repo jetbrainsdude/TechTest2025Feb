@@ -1,0 +1,39 @@
+﻿<div ng-controller="HomeController" ng-cloak>
+    <p>Login by entering your username and password.</p>
+    <fieldset>
+        <form name="loginForm" class="simple-form" novalidate>
+            <!-- User Name -->
+            <div class="form-group" ng-class="{ 'has-error': loginForm.playerName.$touched && loginForm.playerName.$invalid }">
+                <label>User Name</label>
+                <div class="input-group">
+                    <span class="input-group-addon" ><span class="glyphicon glyphicon-user"></span></span>
+                    <input class="form-control input-md" name="playerName" ng-model="login.playerName" placeholder="User Name" type="text" ng-minlength="2" ng-maxlength="60" required>
+                </div>
+                <div class="help-block" ng-messages="loginForm.playerName.$error" ng-if="loginForm.playerName.$touched">
+                    <p ng-message="required">Required</p>
+                    <p ng-message="minlength">User name is too short</p>
+                    <p ng-message="maxlength">User name is too long</p>
+                </div>
+            </div>
+            <!-- User Password -->
+            <div class="form-group" ng-class="{ 'has-error': loginForm.playerPassword.$touched && loginForm.playerPassword.$invalid }">
+                <label>Password</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input class="form-control input-md" name="playerPassword" ng-model="login.playerPassword" placeholder="Password" type="password" ng-minlength="2" ng-maxlength="10" required>
+                </div>
+                <div class="help-block" ng-messages="loginForm.playerPassword.$error" ng-if="loginForm.playerPassword.$touched">
+                    <p ng-message="required">Required</p>
+                    <p ng-message="minlength">User password is too short</p>
+                    <p ng-message="maxlength">User password is too long</p>
+                </div>
+            </div>
+            <!-- Login Button -->
+            <div class="form-group" httpactivity>
+                <button type="submit" class="big btn btn-success" ng-disabled="!loginForm.$valid || httpInProgress" ng-click="loginForm.$valid && doLogin(login)">
+                    <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login To Document Dashboard
+                </button>&nbsp;&nbsp;<span ng-show="httpInProgress"><img src="Content/images/loading-black.gif" />&nbsp;&nbsp;<small>Logging In</small></span>&nbsp;&nbsp;<span class="text-danger" ng-bind="apiMessage"></span>
+            </div>
+        </form>
+    </fieldset>
+</div>

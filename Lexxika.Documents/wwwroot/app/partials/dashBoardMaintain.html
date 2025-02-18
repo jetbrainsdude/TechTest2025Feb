@@ -1,0 +1,48 @@
+﻿<div ng-controller="DashBoardMaintainController">
+    <h3 ng-hide="isNewDocument" >Edit Document</h3>
+    <h3 ng-show="isNewDocument" >New Document</h3>
+    <div>
+        <form name="updateForm" class="simple-form" novalidate>
+            <label>Document Owner</label>
+            <blockquote ng-bind=update.user></blockquote>
+            <!-- Title Of Document -->
+            <div ng-hide="isNewDocument" class="form-group">
+                <label>Title</label>
+                <blockquote ng-bind=update.title></blockquote>
+            </div>
+            <!-- Document -->
+            <div class="form-group" ng-class="{ 'has-error': updateForm.translationTextInPlay.$touched && updateForm.translationTextInPlay.$invalid }">
+                <label ng-show="isNewDocument">Title</label>
+                <div ng-show="isNewDocument">
+                    <textarea class="form-control input-md" name="translationTextInPlay" ng-model="update.title" placeholder="Title" rows="1" ng-minlength="2" ng-maxlength="900" required></textarea>
+                </div>
+                <label>Translation Text</label>
+                <div>
+                    <textarea class="form-control input-md" name="translationTextInPlay" ng-model="update.translationText" placeholder="Translation Text" rows="10" ng-minlength="2" ng-maxlength="900" required></textarea>
+                </div>
+                <div class="help-block" ng-messages="updateForm.translationTextInPlay.$error">
+                    <p ng-message="required">Required</p>
+                    <p ng-message="minlength">Message is too short</p>
+                    <p ng-message="maxlength">Message is too long</p>
+                </div>
+            </div>
+            <!-- Save And Cancel Button -->
+            <div class="form-group" httpactivity>
+                <div ng-hide="isNewDocument">
+                    <button type="button" class="btn btn-danger" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Cancel</button>
+                    <button type="submit" class="big btn btn-success" ng-disabled="!updateForm.$dirty || !updateForm.$valid || httpInProgress" ng-click="updateForm.$valid && updateDocument(update)">
+                        <span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;Save
+                    </button>
+                    &nbsp;&nbsp;<span ng-show="httpInProgress"><img src="Content/images/loading-black.gif" />&nbsp;&nbsp;<small>Updating Document</small></span>&nbsp;&nbsp;<span class="text-danger" ng-bind="apiMessage"></span>
+                </div>
+                <div ng-show="isNewDocument">
+                    <button type="button" class="btn btn-danger" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Cancel</button>
+                    <button type="submit" class="big btn btn-success" ng-disabled="!updateForm.$valid || httpInProgress" ng-click="updateForm.$valid && newDocument(update)">
+                        <span class="glyphicon glyphicon-new-window"></span>&nbsp;&nbsp;Add
+                    </button>
+                    &nbsp;&nbsp;<span ng-show="httpInProgress"><img src="Content/images/loading-black.gif" />&nbsp;&nbsp;<small>Adding New Document</small></span>&nbsp;&nbsp;<span class="text-danger" ng-bind="apiMessage"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

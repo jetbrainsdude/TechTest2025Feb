@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="LexxikaDashboardModule">
+<head>
+    <title>Lexxika Translation Portal</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Lexxika">
+    <meta name="description" content="Lexxika | Assistance and Insurance Industry Translation Specialists">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/css/jrh-custom.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <p></p>
+                <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                    <div ui-view="navigation"></div>
+                </nav>
+                <div ui-view="content"></div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+    <!-- CDNs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <!-- third party libraries-->
+    <script src="Scripts/thirdPartyBundle.min.js"></script>
+
+    <!-- app -->
+    <script src="app/app.js"></script>
+
+    <script src="app/controllers/dashBoardController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/navDashBoardController.js"></script>
+    <script src="app/controllers/navHomeController.js"></script>
+
+    <script src="app/services/apiService.js"></script>
+    <script src="app/services/authInterceptorService.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/sessionService.js"></script>
+
+    <script src="app/directives/directives.js"></script>
+
+</body>
+</html>

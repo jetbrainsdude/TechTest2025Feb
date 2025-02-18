@@ -1,0 +1,43 @@
+﻿<div ng-controller="DashBoardController">
+    <h3>Document Dashboard</h3>
+    <p>Only documents you own will be listed. Administrators will see all available documents. Only administrators can delete documents.</p>
+    <br />
+    <div>
+        <button type="button" class="big btn btn-success" ng-click="newDocument()" httpactivity>
+            <span class="glyphicon glyphicon-new-window"></span>&nbsp;&nbsp;Add New Document
+        </button>
+        &nbsp;&nbsp;<span class="text-danger" ng-bind="apiMessage"></span>&nbsp;&nbsp;<span ng-show="httpInProgress"><img src="Content/images/loading-black.gif" />&nbsp;&nbsp;<small>Loading...</small></span>
+    </div>
+    <br />
+    <div ng-hide="dataPresent || httpInProgress">
+        <p>No documents have been written yet.</p>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Title</th>
+                    <th></th>
+                    <th ng-show="isAdmin"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="document in documents track by document.id">
+                    <td ng-bind-html="document.user"></td>
+                    <td ng-bind-html="document.title"></td>
+                    <td>
+                        <button type="button" class="btn btn-info" ng-disabled="httpInProgress" ng-click="updateDocument(document)" httpactivity>
+                            <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs">&nbsp;&nbsp;Edit</span>
+                        </button>
+                    </td>
+                    <td ng-show="isAdmin">
+                        <button type="button" class="btn btn-danger" ng-disabled="httpInProgress" ng-click="deleteDocument(document)" httpactivity>
+                            <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs">&nbsp;&nbsp;Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
